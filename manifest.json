@@ -1,0 +1,17 @@
+{
+  "name": "MÉMORIA",
+  "short_name": "MÉMORIA",
+  "description": "Votre carnet personnel de souvenirs et d'attentions.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#DCEEFF",
+  "theme_color": "#8CBFE8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#80616E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MÉMORIA">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFF7F0">
+  <title>MÉMORIA — Le journal des attentions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="#" class="brand">M.</a>
+    <span class="edition">LE JOURNAL DES ATTENTIONS · N° 001</span>
+    <span class="top-label">ÉDITION PERSONNELLE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LES GENS QUI COMPTENT</p>
+      <h1>Les belles<br>attentions<br><em>ne s'oublient pas.</em></h1>
+      <p class="intro">
+        Gardez une trace des dates importantes,
+        des envies et des petites choses qui font plaisir.
+      </p>
+      <a href="#anniversaires" class="main-button">
+        DÉCOUVRIR MON JOURNAL ↓
+      </a>
+      <div class="hero-decoration">♥</div>
+    </section>
+
+    <section class="anniversaries" id="anniversaires">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LE CALENDRIER DES ATTENTIONS</p>
+          <h2>À ne pas oublier<span>.</span></h2>
+        </div>
+        <span class="issue-number">01 / 03</span>
+      </div>
+
+      <div class="empty-state">
+        <span class="empty-heart">♡</span>
+        <h3>Votre journal commence ici.</h3>
+        <p>Ajoutez les personnes qui comptent pour vous et leurs dates importantes.</p>
+      </div>
+
+      <button class="add-button" id="addPersonButton">
+        <span>+</span> AJOUTER UNE PERSONNE
+      </button>
+
+<section id="homeSection" class="home-section">
+    <p class="home-eyebrow">VOTRE CARNET DE SOUVENIRS</p>
+
+    <h2>Les belles attentions commencent ici.</h2>
+
+    <p class="home-description">
+        Gardez en mémoire les personnes qui comptent
+        et toutes les petites attentions qui leur feront plaisir.
+    </p>
+
+    <div class="upcoming-box">
+    <h3>Les prochains anniversaires</h3>
+
+    <div id="nextBirthdayCard" class="next-birthday-card">
+        <p class="next-label">PROCHAIN RENDEZ-VOUS</p>
+        <p id="nextBirthdayName">Bientôt une belle occasion...</p>
+        <p id="nextBirthdayCountdown"></p>
+    </div>
+
+    <p id="birthdaySummary" class="birthday-summary"></p>
+    <div id="upcomingBirthdays"></div>
+</div>
+</section><form id="personForm" class="person-form" hidden>
+  <h3>Une nouvelle attention</h3>
+
+  <label for="personName">Prénom</label>
+  <input id="personName" type="text" placeholder="Ex. Camille" required>
+
+  <label for="personBirthday">Date d'anniversaire</label>
+  <input id="personBirthday" type="date" required>
+
+  <label for="personTastes">Ses goûts et ses passions</label>
+  <textarea id="personTastes" placeholder="Ex. aime la lecture, les bijoux, le parfum..."></textarea>
+
+  <label for="personSizes">Ses tailles</label>
+  <textarea id="personSizes" placeholder="Ex. vêtements, chaussures..."></textarea>
+
+  <label for="personDislikes">Ce qu'elle n'aime pas</label>
+  <textarea id="personDislikes" placeholder="Ex. chocolat noir, fleurs..."></textarea>
+
+  <button type="submit" class="main-button">ENREGISTRER</button>
+</form>
+
+
+      <div id="peopleList" class="people-list"></div><section id="giftSection" class="gift-section" hidden>
+    <h3>Ses idées cadeaux</h3>
+    <button id="exportButton" type="button" class="main-button">
+    EXPORTER MES DONNÉES
+</button>
+<input
+    type="file"
+    id="importFile"
+    accept=".json"
+    hidden
+>
+
+<button id="importButton" type="button" class="main-button">
+    IMPORTER MES DONNÉES
+</button>
+
+    <form id="giftForm">
+        <label for="giftName">Idée cadeau</label>
+        <input id="giftName" type="text" placeholder="Ex. Un joli bracelet" required>
+
+        <label for="giftPrice">Prix (facultatif)</label>
+        <input id="giftPrice" type="number" min="0" step="0.01" placeholder="Ex. 25">
+
+        <button type="submit" class="main-button">AJOUTER L'IDÉE</button>
+    </form>
+
+    <div id="giftList"></div>
+</section>
+    </section>
+
+    <footer>
+      <span class="brand">MÉMORIA</span>
+      <p>Les petites attentions font les grands souvenirs.</p>
+      <span>FAIT AVEC ATTENTION ♥</span>
+    </footer>
+  </main>
+  <section id="allGiftsSection" class="all-gifts-section" hidden>
+    <h2>Mes cadeaux</h2>
+
+    <h3>Idées cadeaux</h3>
+    <div id="allGiftIdeas"></div>
+
+    <h3>Déjà offerts</h3>
+    <div id="allGiftHistory"></div>
+</section>
+  <nav class="bottom-nav">
+    <button type="button" id="homeTab">
+        <span>⌂</span>
+        Accueil
+    </button>
+
+    <button type="button" id="peopleTab">
+        <span>♡</span>
+        Personnes
+    </button>
+
+    <button type="button" id="giftsTab">
+        <span>♧</span>
+        Cadeaux
+    </button>
+</nav>
+<<script src="app.js"></script 
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#DCEEFF"/>
+  <rect x="55" y="55" width="402" height="402" rx="90" fill="#8CBFE8"/>
+  <text x="256" y="320"
+        text-anchor="middle"
+        font-family="Georgia, serif"
+        font-weight="bold"
+        font-size="250"
+        fill="#FFFFFF">M</text>
+  <path d="M350 350 C350 325 385 325 385 350 C385 375 350 400 350 400 C350 400 315 375 315 350 C315 325 350 325 350 350"
+        fill="#397EAD"/>
+</svg>

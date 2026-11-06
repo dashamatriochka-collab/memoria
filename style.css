@@ -1,0 +1,548 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+
+:root {
+  --cherry: #80616E;
+  --plum: #30272C;
+  --pink: #DCCBC5;
+  --cream: #F5F0EA;
+  --bright: #C9AAB2;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--plum);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.topbar {
+  min-height: 75px;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eadbd7;
+}
+
+.brand {
+  color: var(--cherry);
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.edition, .top-label, .eyebrow, .issue-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.top-label {
+  color: var(--cherry);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 590px;
+  padding: 95px 12% 85px;
+  background: var(--pink);
+}
+
+.eyebrow {
+  color: var(--cherry);
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 30px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(55px, 9vw, 105px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -4px;
+}
+
+.hero h1 em {
+  color: var(--cherry);
+  font-weight: 500;
+}
+
+.intro {
+  max-width: 390px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 17px 24px;
+  border: none;
+  background: var(--cherry);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.main-button:hover {
+  background: var(--plum);
+  transform: translateY(-3px);
+}
+
+.hero-decoration {
+  position: absolute;
+  right: 12%;
+  top: 100px;
+  color: rgba(181, 34, 58, .15);
+  font-size: 250px;
+  transform: rotate(15deg);
+}
+
+.anniversaries {
+  padding: 95px 12%;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin: 12px 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 65px);
+  font-weight: 600;
+}
+
+.section-heading h2 span {
+  color: var(--cherry);
+}
+
+.issue-number {
+  color: var(--cherry);
+}
+
+.empty-state {
+  padding: 45px 25px;
+  background: #F7E8E5;
+  text-align: center;
+}
+
+.empty-heart {
+  color: var(--cherry);
+  font-size: 45px;
+}
+
+.empty-state h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+}
+
+.empty-state p {
+  max-width: 390px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.add-button {
+  display: block;
+  margin: 30px auto;
+  padding: 17px 25px;
+  border: 1px solid var(--cherry);
+  background: transparent;
+  color: var(--cherry);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: var(--cherry);
+  color: white;
+}
+
+.add-button span {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.person-form {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #F7E8E5;
+}
+
+.person-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+}
+
+.person-form label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.person-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--pink);
+  background: var(--cream);
+  color: var(--plum);
+  font: inherit;
+}
+
+.person-form[hidden] {
+  display: none;
+}
+
+.people-list {
+  display: grid;
+  gap: 15px;
+}
+
+.person-card {
+  padding: 22px;
+  border-left: 4px solid var(--cherry);
+  background: white;
+}
+
+.person-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+footer {
+  padding: 45px 20px;
+  background: var(--plum);
+  color: var(--cream);
+  text-align: center;
+}
+
+footer .brand {
+  color: var(--pink);
+}
+
+footer p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+footer > span:last-child {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 15px 6%;
+  }
+
+  .edition {
+    display: none;
+  }
+
+  .hero {
+    min-height: 530px;
+    padding: 75px 8%;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-decoration {
+    right: -20px;
+    top: 230px;
+    font-size: 160px;
+  }
+
+  .anniversaries {
+    padding: 65px 7%;
+  }
+
+  .section-heading {
+    align-items: start;
+  }
+}
+/* --- DESIGN MOBILE MEMORIA --- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F5F0EA;
+    color: #30272C;
+    font-family: Arial, sans-serif;
+    padding: 24px 16px 40px;
+}
+
+h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #80616E;
+    margin: 25px 0 8px;
+}
+
+h2, h3 {
+    color: #80616E;
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 14px 18px;
+    background: #80616E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #DCCBC5;
+    border-radius: 12px;
+    background: #FFFCF9;
+    color: #30272C;
+    margin: 7px 0 15px;
+    font-size: 16px;
+}
+
+.people-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.person-card, .gift-card {
+    background: #FFFCF9;
+    border: 1px solid #DCCBC5;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 18px rgba(48, 39, 44, 0.05);
+}
+
+@media (min-width: 700px) {
+    body {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 40px 24px;
+    }
+
+    .people-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* --- BARRE DE NAVIGATION MOBILE --- */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFCF9;
+    padding: 10px 12px 20px;
+    border-top: 1px solid #DCCBC5;
+    box-shadow: 0 -4px 15px rgba(48, 39, 44, 0.08);
+    z-index: 1000;
+}
+
+.bottom-nav button {
+    width: auto;
+    flex: 1;
+    background: transparent;
+    color: #80616E;
+    border-radius: 12px;
+    padding: 8px 4px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.bottom-nav button span {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+body {
+    padding-bottom: 110px;
+}
+/* PAGE CADEAUX - STYLE MEMORIA */
+
+.all-gifts-section {
+    padding: 20px 0;
+}
+
+.all-gifts-section h2 {
+    color: #80616E;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.all-gifts-section h3 {
+    color: #80616E;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DCCBC5;
+}
+
+#allGiftIdeas,
+#allGiftHistory {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+#allGiftsSection .gift-card {
+    background: #FFFCF9;
+    border: 1px solid #DCCBC5;
+    border-left: 4px solid #C9AAB2;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 5px 16px rgba(48, 39, 44, 0.05);
+    margin: 0;
+}
+
+#allGiftsSection .gift-card p {
+    color: #80616E;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+#allGiftsSection .gift-card p:first-child {
+    color: #30272C;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#allGiftHistory .gift-card {
+    border-left-color: #80616E;
+}
+/* ACCUEIL MEMORIA */
+
+.home-section {
+    padding: 28px 4px;
+}
+
+.home-eyebrow {
+    color: #80616E;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.home-section h2 {
+    color: #30272C;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.home-description {
+    color: #80616E;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.upcoming-box {
+    background: #FFFCF9;
+    border: 1px solid #DCCBC5;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 5px 18px rgba(48, 39, 44, 0.05);
+}
+
+.upcoming-box h3 {
+    color: #80616E;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#upcomingBirthdays {
+    color: #d1a6b8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+/* CARTE DU PROCHAIN ANNIVERSAIRE */
+
+.next-birthday-card {
+    background: linear-gradient(135deg, #80616E, #A88C97);
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFFCF9;
+    box-shadow: 0 6px 18px rgba(48, 39, 44, 0.12);
+}
+
+.next-birthday-card .next-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #F5F0EA;
+    margin-bottom: 14px;
+}
+
+#nextBirthdayName {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin: 8px 0;
+    color: #FFFCF9;
+}
+
+#nextBirthdayCountdown {
+    font-size: 15px;
+    color: #F5F0EA;
+    margin: 8px 0 0;
+    font-weight: bold;
+}
+
+.birthday-summary {
+    color: #80616E;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
